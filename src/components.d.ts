@@ -20,6 +20,26 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SamveraCard {
+        /**
+          * Action button link
+         */
+        "actionLink": string;
+        /**
+          * Title
+         */
+        "cardTitle": string;
+        /**
+          * Description
+         */
+        "description": string;
+        /**
+          * Image url
+         */
+        "imgUrl": string;
+    }
+    interface SamveraTodoList {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +48,22 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSamveraCardElement extends Components.SamveraCard, HTMLStencilElement {
+    }
+    var HTMLSamveraCardElement: {
+        prototype: HTMLSamveraCardElement;
+        new (): HTMLSamveraCardElement;
+    };
+    interface HTMLSamveraTodoListElement extends Components.SamveraTodoList, HTMLStencilElement {
+    }
+    var HTMLSamveraTodoListElement: {
+        prototype: HTMLSamveraTodoListElement;
+        new (): HTMLSamveraTodoListElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "samvera-card": HTMLSamveraCardElement;
+        "samvera-todo-list": HTMLSamveraTodoListElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +81,30 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SamveraCard {
+        /**
+          * Action button link
+         */
+        "actionLink"?: string;
+        /**
+          * Title
+         */
+        "cardTitle"?: string;
+        /**
+          * Description
+         */
+        "description"?: string;
+        /**
+          * Image url
+         */
+        "imgUrl"?: string;
+    }
+    interface SamveraTodoList {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "samvera-card": SamveraCard;
+        "samvera-todo-list": SamveraTodoList;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +112,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "samvera-card": LocalJSX.SamveraCard & JSXBase.HTMLAttributes<HTMLSamveraCardElement>;
+            "samvera-todo-list": LocalJSX.SamveraTodoList & JSXBase.HTMLAttributes<HTMLSamveraTodoListElement>;
         }
     }
 }

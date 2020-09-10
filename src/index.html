@@ -3,12 +3,60 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <link rel="stylesheet" href="/build/stencil-test-components.css" />
     <title>Stencil Component Starter</title>
 
     <script type="module" src="/build/stencil-test-components.esm.js"></script>
     <script nomodule src="/build/stencil-test-components.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <div class="container">
+      <h1>Stencil Test Components</h1>
+      <p>What is <a href="https://stenciljs.com/" target="_blank">Stencil</a>?</p>
+
+      <h2>Example Web Components created in this repository</h2>
+      <p>What are <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Web Components</a>?</p>
+
+      <article>
+        <hr />
+        <h3><code>my-component</code></h3>
+        <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+      </article>
+
+      <article>
+        <hr />
+        <h3><code>samvera-todo-list</code></h3>
+        <samvera-todo-list></samvera-todo-list>
+      </article>
+
+      <article>
+        <hr />
+        <h3><code>samvera-card</code></h3>
+        <div class="row">
+          <div class="column">
+            <samvera-card
+              img-url="https://picsum.photos/300"
+              card-title="Random image"
+              description="So feel been kept be at gate. Be september it extensive oh concluded of certainty. In read most gate at body held it ever no. Talking justice welcome message inquiry in started of am me."
+              action-link="https://digitalcollections.library.northwestern.edu/items/80b2dd3f-aded-4610-9391-b534a9545552"
+            ></samvera-card>
+          </div>
+          <div class="column">
+            <p>Feed props into this component like so:</p>
+            <p><code>img-url="https://picsum.photos/300"</code></p>
+            <p><code>card-title="Random image"</code></p>
+            <p>
+              <code
+                >description="So feel been kept be at gate. Be september it extensive oh concluded of certainty. In read most gate at body held it ever no. Talking justice welcome
+                message inquiry in started of am me."</code
+              >
+            </p>
+            <p><code>action-link="https://digitalcollections.library.northwestern.edu/items/80b2dd3f-aded-4610-9391-b534a9545552"</code></p>
+          </div>
+        </div>
+      </article>
+      <hr />
+      <p>Open up the code and experiment, eh?</p>
+    </div>
   </body>
 </html>

@@ -1,0 +1,16 @@
+@import '../../global/milligram.css';
+
+:host {
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 300px;
+  box-shadow: 5px 5px 10px #ccc;
+}
+
+.card-contents {
+  padding: 10px;
+}
+.card-button {
+  width: 100%;
+  margin-bottom: 0;
+}
